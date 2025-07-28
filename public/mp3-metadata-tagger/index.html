@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="description" content="Change metadata tags on any MP3 file for Spotify, Apple Music, and more!">
+        <title>MP3 Metadata Tagger</title>
+        <link rel="shortcut icon" href="/mp3-metadata-tagger/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="/mp3-metadata-tagger/styles.css">
+        <link rel="manifest" href="/mp3-metadata-tagger/manifest.json">
+        <link class="favicon" rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <script src="/lib/jquery-3.7.1.slim.js"></script>
+        <script src="/mp3-metadata-tagger/lib/mp3tag.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">MP3 Metadata Tagger</h1>
+            <div class="grid-container">
+                <div class="upload-container">    
+                    <label class="button" for="file-input">
+                        <img src="/mp3-metadata-tagger/lib/icon/upload.svg" alt="Upload" class="icon">
+                        Upload a song
+                    </label>
+                    <img src="/mp3-metadata-tagger/lib/icon/note.svg" alt="Song" class="icon song-icon">
+                    <div class="song-file-name">0.mp3</div>
+                    <input type="file" id="file-input" class="file-input" accept="audio/mpeg" hidden>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-view">
+                        <img src="https://placehold.co/128x128?text=Cover" alt="Preview album cover" class="preview-view-cover">
+                        <div class="preview-view-title">Song Title</div>
+                        <div class="preview-view-artist">Song Artist</div>
+                        <div class="preview-view-bottom">
+                            <div class="preview-view-track">Track X</div>
+                            <div class="preview-view-meta">
+                                <span class="preview-view-album">Song Album</span>
+                                •
+                                <span class="preview-view-year">20XX</span>
+                                •
+                                <span class="preview-view-album-artist">Album Artist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-container">
+                    <div class="edit-title">Edit Metadata</div>
+                    <div class="edit-field">
+                        <label for="edit-input-cover">Cover</label>
+                        <div class="edit-input"><input type="file" id="edit-input-cover" accept="image/png, image/jpg"></div>
+                    </div>
+                    <div class="edit-field">
+                        <label for="edit-input-title">Title</label>
+                        <input type="text" id="edit-input-title" class="edit-input">
+                    </div>
+                    <div class="edit-field">
+                        <label for="edit-input-artist">Artist</label>
+                        <input type="text" id="edit-input-artist" class="edit-input">
+                    </div>
+                    <div class="edit-field">
+                        <label for="edit-input-track">Track Number</label>
+                        <input type="number" min="1" step="1" id="edit-input-track" class="edit-input">
+                    </div>
+                    <div class="edit-field">
+                        <label for="edit-input-album-name">Album Name</label>
+                        <input type="text" id="edit-input-album-name" class="edit-input">
+                    </div>
+                    <div class="edit-field">
+                        <label for="edit-input-album-year">Album Year</label>
+                        <input type="number" min="1969" max="9999" step="1" id="edit-input-album-year" class="edit-input">
+                    </div>
+                    <div class="edit-field">
+                        <label for="edit-input-album-artist">Album Artist</label>
+                        <input type="text" id="edit-input-album-artist" class="edit-input">
+                    </div>
+                    
+                    <button class="button download">
+                        <img src="/mp3-metadata-tagger/lib/icon/download.svg" alt="Download edited song" class="icon">
+                        Download song!
+                    </button>
+                </div>
+            </div>
+            <button class="exit"><img src="/lib/icon/exit.svg" alt="Leave app" class="icon"></button>
+            <div class="version"></div>
+        </div>
+        <script src="/mp3-metadata-tagger/scripts.js"></script>
+    </body>
+</html>

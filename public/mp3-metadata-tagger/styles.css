@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 1em;
+}
+
+.button {
+    background-color: #ffffff;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.4em;
+    border: 1px solid #1b1f2333;
+}
+
+.button:hover { background-image: linear-gradient(#f3f1ff, #d4e5ff); }
+.button:active { background-image: linear-gradient(#e2ebff, #d4e5ff); }
+
+img.icon {
+    width: 20px;
+    vertical-align: middle;
+}
+
+.grid-container {
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 3fr 3fr;
+    grid-template-areas:
+        "upload edit"
+        "preview edit"
+        "preview edit";
+    background-image: linear-gradient(#afb6cb 16.5%, #ffffff 100%);
+}
+
+.title { border-bottom: 2px solid #8f94a3; flex: 0 0 auto; background-color: #afb6cb;}
+
+.upload-container {
+    display: flex;
+    grid-area: upload;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #8f94a3;
+}
+
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    grid-area: edit;
+    border-left: 1px solid #8f94a3;
+    border-radius: 1em 0 0 1em;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.edit-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-field > label {
+    font-weight: bold;
+    margin: 2em 0 0.5em 0;
+}
+
+.edit-input {
+    padding: 0.25em;
+    border-radius: 0.25em;
+    border: 1px solid #8f94a3;
+    background: #fff;
+}
+
+.download {
+    margin-top: 2em;
+    background-color: #48ff72;
+}
+
+.download:hover { background-image: linear-gradient(#48ff72, #32e25b); }
+.download:active { background-image: linear-gradient(#3fea67, #32e25b); }
+
+.preview-container {
+    grid-area: preview;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.edit-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.preview-view {
+    background: 
+        linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)),
+        rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 50%;
+    height: 80%;
+    position: relative;
+}
+
+.preview-view-cover {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.preview-view-title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.preview-view-bottom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+.button > img.icon { margin-right: 4px; margin-left: 0; }
+img.icon { margin: 0 8px 0 12px; }
+.song-file-name { display: inline-block; }
+
+.exit {
+    background: 
+        linear-gradient(145deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05)),
+        rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 1.5em;
+    top: 1.5em;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in-out;
+}
+
+.exit:hover { cursor: pointer; transform: scale(1.1); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); }
+.exit:active { cursor: pointer; transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
+
+.exit > .icon { margin: 1px 0 0 0; }
+
+.version {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
