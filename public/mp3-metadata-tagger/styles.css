@@ -167,6 +167,7 @@ img.icon { margin: 0 8px 0 12px; }
     position: absolute;
     left: 1.5em;
     top: 1.5em;
+    display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.1s ease-in-out;
