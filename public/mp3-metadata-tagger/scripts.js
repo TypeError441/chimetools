@@ -1,6 +1,6 @@
 $(document).ready(function() {
     fetch("/version.json").then(response => response.json())
-    .then(data => {$(".version").text(`v${data.ver}`);
+    .then(data => {
         navigator.serviceWorker.register(`/mp3-metadata-tagger/sw.js?version=${data.ver}`);
     });
 
