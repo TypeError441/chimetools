@@ -56,3 +56,16 @@
 
 .app-title { font-size: 36px; }
 .app-subtitle { font-size: 14px; font-weight: normal; }
+
+/* Mobile */
+@media (max-width: 1300px) {
+    .apps {
+        grid-template-columns: repeat(2, 45%);
+    }
+}
+
+@media (max-width: 750px) {
+    .apps {
+        grid-template-columns: repeat(1, 90%);
+    }
+}

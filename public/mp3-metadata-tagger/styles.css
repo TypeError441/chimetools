@@ -164,7 +164,7 @@ img.icon { margin: 0 8px 0 12px; }
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 50px;
     height: 50px;
-    position: absolute;
+    position: fixed;
     left: 1.5em;
     top: 1.5em;
     display: flex;
@@ -178,8 +178,89 @@ img.icon { margin: 0 8px 0 12px; }
 
 .exit > .icon { margin: 1px 0 0 0; }
 
-.version {
-    position: absolute;
-    left: 1em;
-    bottom: 1em;
+/* Mobile */
+@media (max-width: 1300px) {
+    .grid-container {
+        flex: 1 1 auto;
+        display: grid;
+        grid-template-rows: 16vh 100vh 100vh;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "upload"
+            "preview"
+            "edit";
+        background-image: linear-gradient(#afb6cb 16.5%, #ffffff 100%);
+    }
+
+    .preview-view {
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .upload-container {
+        border-top: 1px solid #8f94a3;
+    }
+
+    .edit-container {
+        border-top: 1px solid #8f94a3;
+        border-left: none;
+        border-radius: 0;
+    }
+
+    .preview-view-cover {
+        width: 50%;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-view-basic-info {
+        margin-left: 20px;
+    }
+
+    .preview-view-title {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .preview-view-bottom {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        text-align: right;
+    }
+}
+
+@media (max-width: 450px) {
+    .preview-view {
+        width: 90%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .preview-view-basic-info {
+        margin: 0;
+    }
+
+    .preview-view-cover {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-view-title {
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .preview-view-bottom {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        text-align: right;
+    }
 }
